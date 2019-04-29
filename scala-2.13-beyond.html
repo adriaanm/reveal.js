@@ -64,15 +64,16 @@ phantomjs plugin/print-pdf/print-pdf.js "file:///Users/adriaan/git/reveal.js/sca
 <section data-markdown><script type="text/template">
 # Open Source =
 ## Open to your input
+## Questions any time 
+## (or adriaan@lightbend.com)
 
 </script></section><section data-markdown><script type="text/template">
 ## Community Contributions
 ### Massive Thank You!
 
-<small>[scala/scala/graphs/contributors?from=2014-11-01&to=2017-11-17&type=c](https://github.com/scala/scala/graphs/contributors?from=2014-11-01&to=2017-11-17&type=c)</small>
-
 </script></section><section data-markdown><script type="text/template">
 ## Lightbend Scala Team
+#### Eugene Yokota
 #### Stefan Zeiger
 #### Seth Tisue
 #### Lukas Rytz
@@ -80,18 +81,15 @@ phantomjs plugin/print-pdf/print-pdf.js "file:///Users/adriaan/git/reveal.js/sca
 #### me
 
 </script></section><section data-markdown><script type="text/template">
-## 2018 goals
-### Double OSS committer team
-Documented process
-
-### Lightbend : Community commits parity
-Currently 2:1
+## Growth in 2018!
+### Doubled number of PRs from 2017
 
 </script></section><section data-markdown><script type="text/template">
 ##  😍 Contributors
 ### help-wanted
 ### PR shepherding
 ### Improve review response time
+### Code of Conduct: we have your back
 
 </script></section><section data-markdown><script type="text/template">
 # GitHub
@@ -114,45 +112,36 @@ Currently 2:1
 </script></section><section data-markdown><script type="text/template">
 ## scala/community-builds
 ### projects built nightly
-  - 2.11.x, April 2014: <span class="red">29</span>; now: <span class="red">48</span>
-  - 2.12.x, April 2016: <span class="red">44</span>; now: <span class="red">126</span>
+  - April 2018: <span class="red">158</span>; now: <span class="red">192</span>
+  - all green in 2.12.x, about 2.5MLoC
+  - 2.13.0-RC2: 91 green, about 1MLoC
+  - Run by Seth
 
 </script></section><section data-markdown><script type="text/template">
 
 # Release Cadence
-## 18 month cycle (LTS releases)
+## 18-24 month cycle (LTS releases)
 ## 1 every 6 weeks (avg)
-## accelerating
 
 </script></section><section data-markdown><script type="text/template">
 # Release Cadence
 
-|first rel. | update / year
---------------------|-------|-------
-**2.10** | Dec '12  | <span class="red">5</span> / <span class="red">2.5 yr</span>
-**2.11** | Apr '14  | <span class="red">8</span> / <span class="red">3 yr</span>
-**2.12** | Nov '16  | <span class="red">4</span> / <span class="red">1 yr</span>
-**2.13** | <em>1H18</em> |
-||
+| | RC1 date | ... since last final | ... to final (months)|   minor releases |
+|----------|----------|-------|---|
+| **2.10** | 10/2012  | 17 | 2.5 | 7 |
+| **2.11** | 03/2014  | 15 | 1   | 9 |
+| **2.12** | 09/2016  | 29 | 1.5 | 7 |
+| **2.13** | 04/2019  | 29 |     |  |
 
 </script></section>
   
-<section>
-<!-- <img src="images/scala-lib-downloads.png" title="Scala Downloads" style="width: 90%;" alt="Scala Downloads"/>
-  for i in 0 1 2 3 4 5 6; do st_stats 2.10.$i 201705 1; done
-  for i in 0 1 2 3 4 5 6 7 8 9 10 11; do st_stats 2.11.$i 201705 1 ; done
-  for i in 0 1 2; do st_stats 2.12.$i 201705 1 ; done
-
-  -->
-<iframe  width="1200" height="720" seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/1_9FriofYW4TFXxaxqj5DzkUdXlgpvZfKyuXU9VFsKB4/pubchart?oid=339248402&amp;format=interactive"></iframe> 
-</section>
 
 </section> <section>
 
 <section data-markdown><script type="text/template">
 
 # Enterprise
-## Fortify plugin (2.11/2.12)
+## Fortify plugin (2.11 and up)
 
 
 </script></section>
@@ -170,17 +159,6 @@ Currently 2:1
 ### Function = SAM instance via INDY
 
 
-</script></section>  <section data-markdown><script type="text/template">
-
-# Smaller jars!
-
-jar | 2.11.12 | 2.12.4
---------------------|-------|-------
-scala-compiler | 15M | 9.3M
-scala-library | 5.5M | 5.0M
-scala-reflect | 4.4M  |  3.4M
-
-
 </script></section><section data-markdown><script type="text/template">
 ## Inspiration from Dotty
   - `trait` & λ encoding
@@ -189,20 +167,6 @@ scala-reflect | 4.4M  |  3.4M
   - Method `lazy val` more compact [#5294](https://github.com/scala/scala/pull/5294)
   - fields phase (+ simplified post-typer phases) [#5141](https://github.com/scala/scala/pull/5141)
 
-
-</script></section><section data-markdown><script type="text/template">
-## sbt improvements (0.13.13–15)
-  - Class-based name hashing [sbt/sbt#1104](https://github.com/sbt/sbt/issues/1104)
-  - More efficient IO for analysis [sbt/sbt#2525](https://github.com/sbt/sbt/issues/2525)
-  - Faster compilation [sbt/sbt#2754](https://github.com/sbt/sbt/pull/2754)
-  - `sbt new`
-
-  
-</script></section><section data-markdown><script type="text/template">
-## 🎉 sbt 1 is out! 🎊
-### Great uptake in community
-### Most plugins available
-### Scala 2.12 😍
 
 </script></section>
 
@@ -261,7 +225,8 @@ method(arg)
 </script></section><section data-markdown><script type="text/template">  
 ## Abstraction
   - for the sake of simplicity!
-  - balance with cost (run-time, debug-time, wtf/s )
+  - balance with cost!! (run-time, debug-time, wtf/s )
+    - (intractable for JIT to optimize e.g. a free monad interpreter)
 
 </script></section><section data-markdown><script type="text/template">
 ## Convenience
@@ -301,7 +266,11 @@ def map[R](mapper: T => R): Stream[R]
 
 <section data-markdown><script type="text/template">
 
-#  Scala 2.13
+#  Scala 2.13 🎉 
+
+#### RC2 days away
+#### final in a few weeks
+
 
 </script></section><section data-markdown><script type="text/template">
 ## Library release
@@ -315,6 +284,11 @@ def map[R](mapper: T => R): Stream[R]
 ### Speed up compiler
 ### User-friendliness
 
+</script></section><section data-markdown><script type="text/template">
+
+<a href="https://scala-ci.typesafe.com/grafana/dashboard/db/scala-benchmark?panelId=4&fullscreen&from=now-1y&to=now&orgId=1&var-branch=2.12.x&var-branch=2.13.x&var-source=scala&var-bench=HotScalacBenchmark.compile&var-host=scalabench@scalabench@">
+<img src="images/bench-2.13-apr-2019.png" title="Scala Bench" style="width: 90%;" alt="Scala Bench"/>
+</a>
 
 </script></section><section data-markdown><script type="text/template">
 # Simpler Collections
@@ -338,7 +312,21 @@ def map[B, That](f: A => B)(
 def map[B](f: A => B): C[B] // intent much clearer
 ```
 
-<small>Requires improved type inference of polymorphic H-O methods [#5307](https://github.com/scala/scala/pull/5307)</small>
+</script></section><section data-markdown><script type="text/template">
+## So long, `CanBuildFrom`
+
+Abstracted over:
+  -  resulting element type of transformation
+    - replaced by improved type inference of polymorphic H-O methods 
+  [#5307](https://github.com/scala/scala/pull/5307)
+  - collection type constructor arity (`Set[_]`/`Map[_, _]`)
+  - orderings for sorted collections
+  - `Future.traverse`  ([BuildFrom](https://www.scala-lang.org/api/2.13.0-RC1/scala/collection/BuildFrom.html))
+  - `breakOut` (no longer supported)
+
+<small>See Julien Richard-Foy, 
+  [Tribulations of CBF](https://www.scala-lang.org/blog/2017/05/30/tribulations-canbuildfrom.html),
+  [Scala 2.13 Collections](https://www.scala-lang.org/blog/2018/06/13/scala-213-collections.html).</small>
 
 </script></section><section data-markdown><script type="text/template">
 # Simpler Collections
@@ -366,10 +354,11 @@ coll.to(Map) // not possible before
 # Simpler Collections
 ## Views (actually work!)
 
-Reified operation over an `Iterator`, like Java 8 Stream.
+  - Underpins better support for lazy collections.
+  - Reflects underlying collection with given transformations.
+  - Can be queried repeatedly. If used only once, same as `Iterator` or a Java 8 `Stream`.
 
-&nbsp;
-
+### Example
 ```scala
 // Build filtered Seq, then mapped Seq, then Set
 val set1 = s.filter(_ > 0).map(_.toString).to(Set)
@@ -378,16 +367,24 @@ val set1 = s.filter(_ > 0).map(_.toString).to(Set)
 val set2 = s.view.filter(_ > 0).map(_.toString).to(Set)
 ```
 
-&nbsp;
 
-Underpins better support for lazy collections.
+</script></section><section data-markdown><script type="text/template">
+# Cross-building
+### scala-collection-compat
+
+  - Docs: https://github.com/scala/docs.scala-lang/pull/1318
+  - scalafix rewrite rules
+
+</script></section><section data-markdown><script type="text/template">
+# More Java converters
+## scala-java8-compat
+
+Integrated into stdlib
 
 </script></section><section data-markdown><script type="text/template">
 # Modularization part 2
-## Parallel collections: ✅
+## Parallel collections
 ## compact1 profile [#6164](https://github.com/scala/scala/pull/6164)
-## Make way for new modules [#5677](https://github.com/scala/scala/issues/5677)
-#### <small>Looking at you, scala.io, scala.sys</small>
 
 
 </script></section><section data-markdown><script type="text/template">
@@ -395,15 +392,45 @@ Underpins better support for lazy collections.
 ## Optimization
 ## Automated Benchmarking & Charting
 
+
+</script></section><section data-markdown><script type="text/template">
+# A few language features
+ - improved type inference HO methods / eta-expansion
+ - literal singleton types
+ - integrated macro paradise (-Ymacro-annotations: still experimental!)
+
 </script></section>
 
-<section data-markdown><script type="text/template">
-# Compiler Performance
-Scala core compile time cut by 25% in last 6 months:
-<a href="https://scala-ci.typesafe.com/grafana/dashboard/db/scala-benchmark?panelId=4&fullscreen&var-branch=2.12.x&var-source=scala&var-bench=HotScalacBenchmark.compile&var-host=scalabench@scalabench@&from=1480673096264&to=1508429045498">
-  <img src="images/bench-2.12-oct-2017.png" style="width: 100%;" />
-</a>
+</section><section>
 
+<section data-markdown><script type="text/template">
+
+# Scala 2.14
+  - Paving the way to 3.0
+  - Thinking about ABI, TASTY & API compatibility
+
+</script></section><section data-markdown><script type="text/template">
+## Backport from Dotty
+ - Trait parameters
+ - Type lambdas (kind-projector)
+ - Top-level definitions
+ - Opaque Types
+ 
+</script></section><section data-markdown><script type="text/template">
+## Simplify, Simplify, Simplify
+ - ~~early initializers~~ (trait params)
+ - ~~procedure syntax~~
+ - ~~`forSome`~~ (wildcards)
+ - ~~whitebox macros~~ (deriving / codegen)
+ - ~~package objects~~ (top-level definitions + exports)
+ - ~~value classes~~ (opaque types)
+
+</script></section><section data-markdown><script type="text/template">
+## Implicits
+  - must have explicit return type
+  - lazy implicit (see: shapeless)
+  - multiple implicit patterns (see: Aux in shapeless)
+  - separate type for implicit conversion value?
 
 </script></section><section data-markdown><script type="text/template">
 # User-friendliness
@@ -416,7 +443,7 @@ Improve tooling, docs
 ### REPL features
 
 </script></section><section data-markdown><script type="text/template">
-### Revamp REPL
+### Revamp REPL (start in 2.13.x)
   - syntax highlighting
   - nicer editing
   - cleaner wrapping
@@ -425,6 +452,7 @@ Improve tooling, docs
 
 </script></section><section data-markdown><script type="text/template">
 ### Scalafix
+
   - use for upgrade to 2.14
     - procedure syntax
     - add sigs for implicits (& non-private members?)
@@ -432,66 +460,15 @@ Improve tooling, docs
   - also, style *checking* / linting
   - (built on scala.meta's semantic api)
 
-</script></section>
-
-</section><section>
-
-<section data-markdown><script type="text/template">
-
-# Scala 2.14
-
 </script></section><section data-markdown><script type="text/template">
-## Faster
-  - Compiler (Kentucky Mule, rsc,...)
-  - Faster build overall (sbt startup, Zinc on CI)
+## Scala 3
 
-</script></section><section data-markdown><script type="text/template">
-## Friendlier
-  - Language Server Protocol
-  - Clearer error messages
- 
-</script></section><section data-markdown><script type="text/template">
-## Simplify, Simplify, Simplify
- - ~~early initializers~~
- - ~~procedure syntax~~
- - ~~`forSome`~~
- - ~~whitebox macros~~ (deriving / codegen)
- - ~~vast implicit scope~~
- - ~~implicit conversions~~
- - ~~package objects~~
- - ~~value classes~~ (opaque types)
-
-</script></section><section data-markdown><script type="text/template">
-## Ideas from Dotty
- - Trait parameters
- - Improved lazy vals & trait vals
-
-</script></section><section data-markdown><script type="text/template">
-## Implicits
-  - must have explicit return type
-  - lazy implicit (see: shapeless)
-  - multiple implicit patterns (see: Aux in shapeless)
-  - separate type for implicit conversion value?
-
-</script></section><section data-markdown><script type="text/template">
-## More
- - literal singleton types
- - type lambda (kind-projector)
- - `@static`
- - (non-null types?)
-
-</script></section><section data-markdown><script type="text/template">
-## New JVM shiny
-  - value types
-  - varhandles
-  - …
-
-</script></section><section data-markdown><script type="text/template">
-## Scala 2.15
-### Last 2.x release
-### Transition to 3.0
-### Avoid Python 3
-
+   - Super exciting!
+   - More cohesion, less orthogonal decoupling
+     - e.g extension methods instead of implicit value class
+   - Revamped implicits
+   - Rich type-level features (matching on types)
+   
 </script></section>
 
 </section>
